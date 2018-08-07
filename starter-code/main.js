@@ -5,8 +5,13 @@
 	For example, "Hello, I'm Anthony, I'm 20 years old and live in 100 Main St."
 	Log this variable to the console (console.log(yourVariableName)). 
 	Check the console to make sure you're getting the desired result.
-
 */
+
+var name = "Sofia";
+var age = 30;
+var address = "Earth";
+var greeting = "Hello, my name is " + name + ". I'm " + age + " years old and I live on " + address +".";
+console.log(greeting);
 
 /*
 	Part 2: Create another variable called greeting2. This time, use the
@@ -18,6 +23,9 @@
 	Check the console to make sure you're getting the desired result.
 
 */
+
+var greeting2 = `Hello, my name is ${name}. I'm ${age} years old and I live on ${address}.`;
+console.log(greeting2);
 
 /*
 	Part 3: Pythagorean theorem. We will be using the Math object we saw earlier
@@ -43,6 +51,12 @@
 	Check the console to make sure you're getting the desired result.
 */
 
+var side1 = 2;
+var side2 = 2;
+var side3 = Math.sqrt(((side1*side1)+(side2*side2)));
+console.log(`Your triangle with a side of ${side1} and another side of ${side2} is = ${side3}`);
+
+
 /*
 	Part 4: (No coding is needed for this part).
 	We are given a list of 20 numbers. We have to go through the list and find the
@@ -55,6 +69,20 @@
 	belongs in a variable.
 
 	Bonus: What would the pseudocode look like if you also had to find the smallest number?
+*/
+
+/* Problem: find largest number in a collection of 20 numbers
+Variables needed: total number of elements, largest element
+Pseudocode steps:
+1. Make a list of 20 numbers
+2. The largest starting number is 0
+3. Look at current number and compare it to the initial largest number (0)
+4. If current number is > larger number, 
+	make the large number equal to the current number
+5. Repeat until all 20 elements have been exhausted
+6. Current element is now the largest number
+
+Bonus: we would have to compare for < instead of >
 */
 
 
@@ -77,3 +105,10 @@ Steps:
 */
 
 var numbers = [20, 3, 5, 7, 13, 30];
+var highestNumber = 0;
+for (var i = 0; i < numbers.length; i++) {
+	if (numbers[i] > highestNumber) {
+		highestNumber = numbers[i];
+	}
+}
+console.log(highestNumber);
